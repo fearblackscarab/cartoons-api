@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="main">
+    <% data.forEach(item=>{ %>
+        <section class="section cartoon-section">
+            <p class="cartoon-title"><a href="/cartoons/<%= item.id %> "><%= item.title %></a></p>
+            <p class="cartoon-year"><%=  item.year %> </p>
+            <img class="cartoon-img" src="<%= item.image %>" alt="image of <%= item.title %> ">
+            <p class="creator"><%= item.creator %> </p>
+        </section>
+    <% }) %> 
+</main>
+
+<%- include('../partials/footer') %> 
